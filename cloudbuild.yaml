@@ -28,6 +28,6 @@ steps:
   # Entrypoint, timeout and environment variables
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     entrypoint: 'bash'
-    args: ['-c', 'gcloud config set app/cloud_build_timeout 1600 && gcloud app --image-url us-central1-docker.pkg.dev/gp-d-cccmk-mkc01/docker-repo-01760/python-fastapi:v1']
+    args: ['-c', 'gcloud config set app/cloud_build_timeout 1600 && gcloud app deploy app.yaml --image-url us-central1-docker.pkg.dev/${PROJECT_ID}/docker-repo-01760/python-fastapi:v1']
     timeout: '1600s'
 # [END cloudbuild_basic_config]
