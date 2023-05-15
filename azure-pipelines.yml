@@ -11,7 +11,7 @@ resources:
 variables:
   # Container registry service connection established during pipeline creation
   dockerRegistryServiceConnection: '7ad99194-e9fb-4a6a-858d-efe50d760102'
-  imageRepository: 'ccckazuyukionouvicorngunicornfastapidocker'
+  imageRepository: 'dockerrepo01760fastapi-image'
   containerRegistry: 'dockerrepo01760.azurecr.io'
   dockerfilePath: '$(Build.SourcesDirectory)/docker-images/Dockerfile'
   tag: '$(Build.BuildId)'
