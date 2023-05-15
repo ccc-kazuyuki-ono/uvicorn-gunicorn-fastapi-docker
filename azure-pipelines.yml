@@ -14,7 +14,7 @@ variables:
   imageRepository: 'dockerrepo01760fastapi-image'
   containerRegistry: 'dockerrepo01760.azurecr.io'
   dockerfilePath: '$(Build.SourcesDirectory)/docker-images/Dockerfile'
-  tag: '$(Build.BuildId)'
+  tag: 'FixTagID'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
