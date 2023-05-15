@@ -37,14 +37,10 @@ stages:
         containerRegistry: $(dockerRegistryServiceConnection)
         tags: |
           $(tag)
-- task: AzureRmWebAppDeployment@4
-  inputs:
-    ConnectionType: 'AzureRM'
-    azureSubscription: 'cccmk-mkc-01 (1ee03cef-693d-46db-af85-6986ad877f33)'
-    appType: 'webAppContainer'
-    WebAppName: 'python-fastapi-01760'
-    deployToSlotOrASE: true
-    ResourceGroupName: 'adcpj-01760'
-    SlotName: 'production'
-    DockerNamespace: 'dockerrepo01760.azurecr.io'
-    DockerRepository: 'dockerrepo01760fastapi-image'
+    - task: AzureWebAppContainer@1
+      inputs:
+        azureSubscription: 'cccmk-mkc-01 (1ee03cef-693d-46db-af85-6986ad877f33)'
+        appName: 'python-fastapi-01760'
+        deployToSlotOrASE: true
+        resourceGroupName: 'adcpj-01760'
+        slotName: 'production'
