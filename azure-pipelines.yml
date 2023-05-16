@@ -6,6 +6,10 @@ trigger:
   branches:
     include:
       - master
+    exclude:
+      - 'test*'
+
+pr: none
 
 resources:
 - repo: self
